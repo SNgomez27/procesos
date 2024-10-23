@@ -25,7 +25,7 @@ public class hilosmain {
                 int valor = 0;
                 while (true) {
                     esta.salidaCoche();
-                    valor--;
+
                     Thread.sleep(2000);
 
                 }
