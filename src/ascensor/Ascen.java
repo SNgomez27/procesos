@@ -1,7 +1,7 @@
 package ascensor;
 import java.util.LinkedList;
 public class Ascen {
-    private static int Ascen = 7;
+    private static int Ascen = 10;
     private int personasA;
     private int personasB;
     public synchronized  void entarAlAscensor() throws InterruptedException {
@@ -10,7 +10,7 @@ public class Ascen {
             wait();
         }
         personasA++;
-        System.out.println("opa" + this.personasA + "personas estan entrando al ascensor");
+        System.out.println("opa " + this.personasA + " personas estan entrando al ascensor");
         notify();
     }
     public synchronized  void salirDelDescensor() throws InterruptedException {
@@ -19,7 +19,7 @@ public class Ascen {
             wait();
         }
         personasB++;
-        System.out.println("opa" + this.personasB + "personas estan salida");
+        System.out.println("opa " + this.personasB + " personas estan salida");
         notify();
     }
 }
